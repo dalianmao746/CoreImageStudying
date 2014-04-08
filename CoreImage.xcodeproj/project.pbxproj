@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7554E2818F3EC260022A658 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7554E2718F3EC260022A658 /* AssetsLibrary.framework */; };
 		D7CCCCEA18F2CD360027EB80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCCCE918F2CD360027EB80 /* UIKit.framework */; };
 		D7CCCCEC18F2CD360027EB80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCCCEB18F2CD360027EB80 /* Foundation.framework */; };
 		D7CCCCEE18F2CD360027EB80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCCCED18F2CD360027EB80 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7554E2718F3EC260022A658 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		D7CCCCE618F2CD360027EB80 /* CoreImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CCCCE918F2CD360027EB80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7CCCCEB18F2CD360027EB80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7554E2818F3EC260022A658 /* AssetsLibrary.framework in Frameworks */,
 				D7CCCD0D18F2CD450027EB80 /* CoreImage.framework in Frameworks */,
 				D7CCCCEA18F2CD360027EB80 /* UIKit.framework in Frameworks */,
 				D7CCCCEC18F2CD360027EB80 /* Foundation.framework in Frameworks */,
@@ -61,6 +64,7 @@
 		D7CCCCDD18F2CD360027EB80 = {
 			isa = PBXGroup;
 			children = (
+				D7554E2718F3EC260022A658 /* AssetsLibrary.framework */,
 				D7CCCD1018F2CDB10027EB80 /* image.jpg */,
 				D7CCCD0C18F2CD450027EB80 /* CoreImage.framework */,
 				D7CCCCEF18F2CD360027EB80 /* CoreImage */,
@@ -307,6 +311,7 @@
 				D7CCCD0B18F2CD360027EB80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
