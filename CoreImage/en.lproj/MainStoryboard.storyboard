@@ -105,8 +105,6 @@
                             <constraint firstItem="hBA-up-lde" firstAttribute="trailing" secondItem="hj8-qp-K3j" secondAttribute="trailing" type="default" id="881-Cs-gZi"/>
                             <constraint firstItem="eNl-cB-sUa" firstAttribute="trailing" secondItem="rUi-8S-DSb" secondAttribute="trailing" type="default" id="A6B-zQ-ce1"/>
                             <constraint firstItem="rUi-8S-DSb" firstAttribute="baseline" secondItem="Q9N-w9-dP4" secondAttribute="baseline" type="default" id="CXN-xe-0Da"/>
-                            <constraint firstItem="eNl-cB-sUa" firstAttribute="top" secondItem="uTr-Ka-niv" secondAttribute="top" type="default" id="GnR-xh-Yb8"/>
-                            <constraint firstItem="hBA-up-lde" firstAttribute="top" secondItem="uTr-Ka-niv" secondAttribute="top" type="default" id="LI3-nD-Jgp"/>
                             <constraint firstItem="Q9N-w9-dP4" firstAttribute="baseline" secondItem="hj8-qp-K3j" secondAttribute="baseline" type="default" id="LXR-18-wQV"/>
                             <constraint firstItem="rUi-8S-DSb" firstAttribute="leading" secondItem="eNl-cB-sUa" secondAttribute="leading" type="default" id="OS5-fk-gem"/>
                             <constraint firstItem="aoi-u0-5b4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="-98" id="QgT-Wy-LFJ"/>
@@ -115,7 +113,6 @@
                             <constraint firstItem="uTr-Ka-niv" firstAttribute="baseline" secondItem="eNl-cB-sUa" secondAttribute="baseline" type="default" id="c8X-NF-MOs"/>
                             <constraint firstAttribute="bottom" secondItem="hj8-qp-K3j" secondAttribute="bottom" constant="114" id="eGZ-9x-htS"/>
                             <constraint firstItem="uTr-Ka-niv" firstAttribute="trailing" secondItem="Q9N-w9-dP4" secondAttribute="trailing" type="default" id="eIi-jT-MTN"/>
-                            <constraint firstItem="eNl-cB-sUa" firstAttribute="baseline" secondItem="hBA-up-lde" secondAttribute="baseline" type="default" id="gfr-Vi-HdF"/>
                             <constraint firstItem="hj8-qp-K3j" firstAttribute="leading" secondItem="hBA-up-lde" secondAttribute="leading" type="default" id="lmz-sO-Tes"/>
                             <constraint firstItem="Q9N-w9-dP4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="124" id="sKO-WO-NTu"/>
                             <constraint firstItem="hj8-qp-K3j" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="26" id="tRk-0x-LvN"/>

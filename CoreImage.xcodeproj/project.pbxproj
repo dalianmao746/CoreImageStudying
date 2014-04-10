@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7285B1F18F6CF2700188C7E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D7285B1E18F6CF2700188C7E /* UIImage+Resize.m */; };
 		D7554E2818F3EC260022A658 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7554E2718F3EC260022A658 /* AssetsLibrary.framework */; };
 		D7CCCCEA18F2CD360027EB80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCCCE918F2CD360027EB80 /* UIKit.framework */; };
 		D7CCCCEC18F2CD360027EB80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCCCEB18F2CD360027EB80 /* Foundation.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7285B1E18F6CF2700188C7E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		D7285B2018F6CF6300188C7E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		D7554E2718F3EC260022A658 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		D7CCCCE618F2CD360027EB80 /* CoreImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CCCCE918F2CD360027EB80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -42,7 +45,7 @@
 		D7CCCD0418F2CD360027EB80 /* CoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreImageViewController.h; sourceTree = "<group>"; };
 		D7CCCD0518F2CD360027EB80 /* CoreImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreImageViewController.m; sourceTree = "<group>"; };
 		D7CCCD0C18F2CD450027EB80 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		D7CCCD1018F2CDB10027EB80 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		D7CCCD1018F2CDB10027EB80 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = ../image.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +67,6 @@
 		D7CCCCDD18F2CD360027EB80 = {
 			isa = PBXGroup;
 			children = (
-				D7554E2718F3EC260022A658 /* AssetsLibrary.framework */,
-				D7CCCD1018F2CDB10027EB80 /* image.jpg */,
-				D7CCCD0C18F2CD450027EB80 /* CoreImage.framework */,
 				D7CCCCEF18F2CD360027EB80 /* CoreImage */,
 				D7CCCCE818F2CD360027EB80 /* Frameworks */,
 				D7CCCCE718F2CD360027EB80 /* Products */,
@@ -84,6 +84,8 @@
 		D7CCCCE818F2CD360027EB80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7CCCD0C18F2CD450027EB80 /* CoreImage.framework */,
+				D7554E2718F3EC260022A658 /* AssetsLibrary.framework */,
 				D7CCCCE918F2CD360027EB80 /* UIKit.framework */,
 				D7CCCCEB18F2CD360027EB80 /* Foundation.framework */,
 				D7CCCCED18F2CD360027EB80 /* CoreGraphics.framework */,
@@ -95,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				D7CCCCF818F2CD360027EB80 /* CoreImageAppDelegate.h */,
+				D7285B1E18F6CF2700188C7E /* UIImage+Resize.m */,
+				D7285B2018F6CF6300188C7E /* UIImage+Resize.h */,
 				D7CCCCF918F2CD360027EB80 /* CoreImageAppDelegate.m */,
 				D7CCCD0118F2CD360027EB80 /* MainStoryboard.storyboard */,
 				D7CCCD0418F2CD360027EB80 /* CoreImageViewController.h */,
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D7CCCCF118F2CD360027EB80 /* CoreImage-Info.plist */,
+				D7CCCD1018F2CDB10027EB80 /* image.jpg */,
 				D7CCCCF218F2CD360027EB80 /* InfoPlist.strings */,
 				D7CCCCF518F2CD360027EB80 /* main.m */,
 				D7CCCCF718F2CD360027EB80 /* CoreImage-Prefix.pch */,
@@ -189,6 +194,7 @@
 				D7CCCCF618F2CD360027EB80 /* main.m in Sources */,
 				D7CCCCFA18F2CD360027EB80 /* CoreImageAppDelegate.m in Sources */,
 				D7CCCD0618F2CD360027EB80 /* CoreImageViewController.m in Sources */,
+				D7285B1F18F6CF2700188C7E /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

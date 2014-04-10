@@ -21,7 +21,6 @@
 @implementation CoreImageViewController
 @synthesize imageView;
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,18 +30,19 @@
 }
 
 - (IBAction)filter1:(id)sender {
-    
-    inputImage = [[CIImage alloc] initWithImage:[UIImage imageNamed:@"image.jpg"]];
+
+    CIImage *beginImage = [CIImage imageWithData: UIImagePNGRepresentation(self.imageView.image )];
     
     //2
     context = [CIContext contextWithOptions:nil];
     
     //3
     filter = [CIFilter filterWithName:@"CIBumpDistortion"];
-    [filter setValue:inputImage forKey:@"inputImage"];
+    [filter setValue:beginImage forKey:@"inputImage"];
     [filter setValue:[CIVector vectorWithX:400 Y:300] forKey:@"inputCenter"];
     [filter setValue:[NSNumber numberWithFloat:100] forKey:@"inputRadius"];
     [filter setValue:[NSNumber numberWithFloat:3] forKey:@"inputScale"];
+ 
     //4
     outputImage = [filter outputImage];
     imageView.image = [UIImage imageWithCGImage:[context createCGImage:outputImage fromRect:outputImage.extent]];
@@ -50,14 +50,14 @@
 
 - (IBAction)filter2:(id)sender {
     
-    inputImage = [[CIImage alloc] initWithImage:[UIImage imageNamed:@"image.jpg"]];
+    CIImage *beginImage = [CIImage imageWithData: UIImagePNGRepresentation(self.imageView.image )];
     
     //2
     context = [CIContext contextWithOptions:nil];
     
     //3
     filter = [CIFilter filterWithName:@"CIHueAdjust"];
-    [filter setValue:inputImage forKey:@"inputImage"];
+    [filter setValue:beginImage forKey:@"inputImage"];
     [filter setValue:[NSNumber numberWithFloat:2.0] forKey:@"inputAngle"];
 	
     //4
@@ -68,19 +68,30 @@
 
 - (IBAction)filter3:(id)sender {
     
-    inputImage = [[CIImage alloc] initWithImage:[UIImage imageNamed:@"image.jpg"]];
-    
+    CIImage *beginImage = [CIImage imageWithData: UIImagePNGRepresentation(self.imageView.image )];
+
     //2
     context = [CIContext contextWithOptions:nil];
     
     filter = [CIFilter filterWithName:@"CIGloom"]; // 1
-    [filter setValue:inputImage forKey:@"inputImage"];
+    [filter setValue:beginImage forKey:@"inputImage"];
     [filter setValue: [NSNumber numberWithFloat: 0.75]
              forKey: @"inputIntensity"]; // 3
     
     outputImage = [filter outputImage];
     imageView.image = [UIImage imageWithCGImage:[context createCGImage:outputImage fromRect:outputImage.extent]];
+    
 }
+
+- (IBAction)selectPhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
 
 - (IBAction)takePicture:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -89,16 +100,6 @@
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     [self presentViewController:picker animated:YES completion:NULL];
  }
-
-- (IBAction)selectPhoto:(UIButton *)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-}
 
 - (IBAction)savePhoto:(id)sender {
     
@@ -112,7 +113,7 @@
     metadata:[saveToSave properties]
     completionBlock:^(NSURL *assetURL, NSError *error) {
     CGImageRelease(cgImg);
-                          }];
+    }];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
